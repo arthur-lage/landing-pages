@@ -11,5 +11,6 @@ html {
 }
 
 body.menuIsOpen {
+    height: 100vh;
     overflow: hidden;
 }
