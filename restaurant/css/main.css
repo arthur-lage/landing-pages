@@ -283,6 +283,7 @@
 .contact {
   display: flex;
   padding-top: 10rem;
+  transition: 0.3s ease;
   align-items: center;
   justify-content: center;
   padding-bottom: 5rem;
@@ -350,6 +351,97 @@
   padding: 2rem 0;
 }
 
+.contact form {
+  display: block;
+}
+
+.contact .loading-wrapper {
+  display: none;
+}
+
+.contact .message-sent {
+  display: none;
+}
+
+/* message sending */
+
+.contact.sending form {
+  display: none;
+}
+
+.contact.sending .loading-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0px 5px 35px rgb(0, 0, 0, .2);
+  border: 15px solid #fff;
+
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 5rem;
+
+  width: 80vw;
+}
+
+.contact.sending .loading {
+  border: 6px solid #a1a1a1;
+  border-top-color: #ff0157;
+  border-radius: 50%;
+
+  animation: loading 1s infinite;
+
+  width: 6rem;
+  height: 6rem;
+}
+
+.contact.sending .message-sent {
+  display: none;
+}
+
+/* message sent */
+
+.contact.sent form {
+  display: none;
+}
+
+.contact.sent .loading-wrapper {
+  display: none;
+}
+
+.contact.sent .message-sent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  width: 80vw;
+  padding: 5rem;
+  
+  box-shadow: 0px 5px 35px rgb(0, 0, 0, .2);
+}
+
+.contact.sent .message-sent h3 {
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+  color: #111;
+}
+
+.contact.sent .message-sent p {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact.sent .message-sent p + p {
+  margin-bottom: 3rem;
+}
+
+.contact.sent .message-sent button {
+  border: 0;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 900px) {
   .about {
     padding: 10rem 4rem;
@@ -370,7 +462,7 @@
   .expert {
     padding: 10rem 4rem;
   }
-  
+
   .expert .content {
     display: flex;
     align-items: center;
@@ -403,7 +495,7 @@
   .menu .content {
     gap: 3rem;
   }
-  
+
   .menu p {
     margin-bottom: 4rem;
   }
@@ -420,7 +512,7 @@
     margin-bottom: 2rem;
     font-size: clamp(1.6rem, 5vw, 2rem);
   }
-  
+
   .testimonials .box h3 {
     text-align: center;
   }
@@ -440,7 +532,7 @@
     flex-direction: column;
     padding: 0;
   }
-  
+
   .menu .btn {
     margin-top: 5rem;
   }
@@ -451,21 +543,27 @@
 }
 
 @media screen and (max-width: 375px) {
-  .banner .content h2{
+  .banner .content h2 {
     font-size: 5rem;
   }
-  
-  .banner .content p{
+
+  .banner .content p {
     font-size: 2rem;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .banner .content h2{
+  .banner .content h2 {
     font-size: 4rem;
   }
-  
-  .banner .content p{
+
+  .banner .content p {
     font-size: 1.8rem;
+  }
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
   }
 }

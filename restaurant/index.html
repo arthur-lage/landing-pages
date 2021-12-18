@@ -238,13 +238,23 @@
           />
         </div>
         <div class="input-field">
-          <textarea cols="5" rows="5" placeholder="Message" required></textarea>
+          <textarea id="message" cols="5" rows="5" placeholder="Message" required></textarea>
         </div>
-        <a type="submit" class="btn">Send</a>
+        <a type="submit" id="send-message" class="btn">Send</a>
       </form>
+      <div class="loading-wrapper">
+        <div class="loading"></div>
+      </div>
+      <div class="message-sent">
+        <h3>Message sent successfully!</h3>
+        <p>We really aprecciate it.</p>
+        <p>If you want to send another message, you can click the button below:</p>
+        <button type="button" class="btn" id="send-another-message">Send more messages</button>
+      </div>
     </section>
 
     <script src="./scripts/header.js"></script>
     <script src="./scripts/mobile.js"></script>
+    <script src="./scripts/contact-us.js"></script>
   </body>
 </html>
