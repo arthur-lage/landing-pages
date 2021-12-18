@@ -374,7 +374,7 @@
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0px 5px 35px rgb(0, 0, 0, .2);
+  box-shadow: 0px 5px 35px rgb(0, 0, 0, 0.2);
   border: 15px solid #fff;
 
   margin-top: 4rem;
@@ -418,8 +418,8 @@
 
   width: 80vw;
   padding: 5rem;
-  
-  box-shadow: 0px 5px 35px rgb(0, 0, 0, .2);
+
+  box-shadow: 0px 5px 35px rgb(0, 0, 0, 0.2);
 }
 
 .contact.sent .message-sent h3 {
@@ -562,8 +562,28 @@
   }
 }
 
+section.appearLeft {
+  animation: appearLeft 1s ease 1 forwards;
+}
+
+section.appearRight {
+  animation: appearLeft 1s ease 1 forwards;
+}
+
 @keyframes loading {
   to {
     transform: rotate(1turn);
   }
+}
+
+.reveal {
+  position: relative;
+  transform: translateX(-200px);
+  transition: 1s ease;
+  opacity: 0;
+}
+
+.reveal.active {
+  transform: translateX(0);
+  opacity: 1;
 }
