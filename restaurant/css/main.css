@@ -13,16 +13,17 @@
 .banner .content {
   max-width: 90rem;
   text-align: center;
+  padding: 5rem;
 }
 
 .banner .content h2 {
-  font-size: 5rem;
+  font-size: clamp(1.8rem, 4vw, 5rem);
   color: #fff;
   margin-bottom: 3.5rem;
 }
 
 .banner .content p {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
   color: #fff;
   font-weight: 300;
   font-size: 2.25rem;
@@ -30,7 +31,7 @@
 }
 
 .btn {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   color: #fff;
   background: #ff0157;
   display: inline-block;
@@ -102,6 +103,7 @@
   color: #111;
   font-weight: 300;
   font-size: 4rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -120,13 +122,13 @@
   padding: 10rem;
   padding-bottom: 4rem;
   display: grid;
-  gap: 4rem;
+  gap: clamp(1rem, 2.5vw, 4rem);
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menu .content .box {
-  width: 34rem;
+  width: clamp(18rem, 5vw, 34rem);
   border: 15px solid #fff;
   box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -163,6 +165,7 @@
   color: #111;
   font-weight: 300;
   font-size: 4rem;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -192,7 +195,7 @@
 }
 
 .expert .content .box p {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   margin-top: 1rem;
   font-weight: 500;
 }
@@ -221,6 +224,7 @@
   font-weight: 300;
   font-size: 4rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .testimonials .title h2 span {
@@ -230,7 +234,7 @@
 }
 
 .testimonials .title p {
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   margin-bottom: 10rem;
   text-align: center;
   color: #fff;
@@ -254,7 +258,7 @@
 }
 
 .testimonials .box .imgBox {
-  width: 10rem;
+  width: 20rem;
   margin-bottom: 2rem;
 }
 
@@ -269,23 +273,26 @@
   font-style: italic;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
 }
 
 .testimonials .box h3 {
   text-align: center;
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
 }
 
 .contact {
-  padding: 10rem;
   display: flex;
+  padding-top: 10rem;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding-bottom: 5rem;
 }
 
 .contact .title h2 {
   color: #111;
   font-weight: 300;
+  text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
@@ -297,26 +304,15 @@
 }
 
 .contact form {
-  width: 50rem;
+  width: 80vw;
   border: 15px solid #fff;
   box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.2);
-}
-
-.contact .image {
-  width: 60rem;
-  height: 100%;
-}
-
-.contact .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .contact .input-field input {
   border: 2px solid #444;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   font-family: "Poppins", sans-serif;
   outline: none;
   padding: 0.75rem;
@@ -336,7 +332,7 @@
 
 .contact .input-field textarea {
   font-family: "Poppins", sans-serif;
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
   border: 2px solid #444;
   width: 100%;
   outline: none;
@@ -355,6 +351,78 @@
   padding: 2rem 0;
 }
 
-@media screen and (max-width: 1024px) {
-    
+@media screen and (max-width: 900px) {
+  .about {
+    padding: 10rem 4rem;
+  }
+
+  .about .row {
+    flex-direction: column-reverse;
+  }
+
+  .about .row .col50 {
+    width: 100%;
+  }
+
+  .about .row .col50:first-child {
+    margin-top: 2rem;
+  }
+
+  .expert {
+    padding: 10rem 4rem;
+  }
+  
+  .expert .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .testimonials .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .testimonials {
+    padding: 10rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .menu .content {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .testimonials .box p {
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: clamp(1.6rem, 5vw, 2rem);
+  }
+  
+  .testimonials .box h3 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .menu .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
 }
