@@ -13,7 +13,3 @@ html {
 body.menuIsOpen {
     overflow: hidden;
 }
-
-body.menuIsOpen .mobile-links{
-    
-}

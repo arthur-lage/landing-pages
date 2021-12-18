@@ -120,6 +120,10 @@ header .navigation li a:hover {
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+body .mobile-links {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   header .navigation {
     display: none;
@@ -127,5 +131,32 @@ header .navigation li a:hover {
 
   header .mobile-menu {
     display: flex;
+  }
+
+  body.menuIsOpen .mobile-links{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    bottom: 0;
+    background: #fff;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    list-style: none;
+  }
+
+  body.menuIsOpen .mobile-links li {
+    margin: 2rem 0;
+  }
+
+  body.menuIsOpen .mobile-links li a {
+    color: #111;
+    text-decoration: none;
+    font-size: 2.2rem;
+    font-weight: 500;
   }
 }
