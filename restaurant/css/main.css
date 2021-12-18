@@ -17,16 +17,15 @@
 }
 
 .banner .content h2 {
-  font-size: clamp(1.8rem, 4vw, 5rem);
+  font-size: clamp(1.8rem, 10vw, 5rem);
   color: #fff;
   margin-bottom: 3.5rem;
 }
 
 .banner .content p {
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-size: clamp(1.2rem, 4vw, 2rem);
   color: #fff;
   font-weight: 300;
-  font-size: 2.25rem;
   margin-bottom: 3.5rem;
 }
 
@@ -128,7 +127,7 @@
 }
 
 .menu .content .box {
-  width: clamp(18rem, 5vw, 34rem);
+  width: clamp(18rem, 24vw, 34rem);
   border: 15px solid #fff;
   box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -188,14 +187,14 @@
 }
 
 .expert .content .box {
-  width: 30rem;
+  width: clamp(20rem, 20vw, 30rem);
   border: 15px solid #fff;
   box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
 .expert .content .box p {
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
   margin-top: 1rem;
   font-weight: 500;
 }
@@ -258,7 +257,7 @@
 }
 
 .testimonials .box .imgBox {
-  width: 20rem;
+  width: clamp(10rem, 2.5vw, 16rem);
   margin-bottom: 2rem;
 }
 
@@ -396,6 +395,24 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .menu .title p {
+    padding: 0 4rem;
+  }
+
+  .menu .content {
+    gap: 3rem;
+  }
+  
+  .menu p {
+    margin-bottom: 4rem;
+  }
+
+  .about {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .testimonials .box p {
     font-style: italic;
@@ -416,13 +433,39 @@
     flex-direction: column;
     padding: 0;
   }
-}
 
-@media screen and (max-width: 425px) {
   .menu .content {
     display: flex;
     align-items: center;
     flex-direction: column;
     padding: 0;
+  }
+  
+  .menu .btn {
+    margin-top: 5rem;
+  }
+
+  .banner .btn {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .banner .content h2{
+    font-size: 5rem;
+  }
+  
+  .banner .content p{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .banner .content h2{
+    font-size: 4rem;
+  }
+  
+  .banner .content p{
+    font-size: 1.8rem;
   }
 }

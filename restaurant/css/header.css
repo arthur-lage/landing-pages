@@ -73,15 +73,15 @@ header .navigation li a:hover {
   display: none;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: clamp(4rem, 2.5vw, 8rem);
+  height: clamp(4rem, 2.5vw, 8rem);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .hamburger {
-  width: 50px;
-  height: 6px;
+  width: 100%;
+  height: clamp(.25rem, 1.5vw, .6rem);
   background: #fff;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
@@ -91,8 +91,8 @@ header .navigation li a:hover {
 .hamburger::after {
   content: "";
   position: absolute;
-  width: 50px;
-  height: 6px;
+  width: 100%;
+  height: clamp(.25rem, 1.5vw, .6rem);
   background: #fff;
   border-radius: 5px;
   transition: all 0.2s ease-in-out;
